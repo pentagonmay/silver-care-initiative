@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SilverCare Portal — Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7fafc;
+      --card-bg: #ffffff;
+      --accent: #0b5ed7;
+      --radius: 14px;
+    }
+    body {
+      background: var(--bg);
+      font-family: "Arial", sans-serif;
+      min-height: 100vh;
+    }
+    .navbar-brand {
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+    .nav-link {
+      font-size: 1.1rem;
+      margin: 0 8px;
+    }
+    .welcome-banner {
+      background: linear-gradient(135deg, #0b5ed7, #0dcaf0);
+      color: white;
+      border-radius: var(--radius);
+      padding: 3rem 2rem;
+      margin: 2rem 0;
+    }
+    .section-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin: 1rem 0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .hospital-card, .event-card, .video-card {
+      border: 2px solid #e9ecef;
+      border-radius: 10px;
+      padding: 1rem;
+      margin: 0.5rem 0;
+      transition: transform 0.2s;
+    }
+    .hospital-card:hover, .event-card:hover, .video-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+    }
+    .btn-large {
+      font-size: 1.1rem;
+      padding: 12px 24px;
+    }
+    .read-btn {
+      border-radius: 10px;
+      padding: 8px 12px;
+    }
+    .login-fixed{
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1050;
+        border-radius: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.heml">
+        <img src="SilverCare_Logo.jpg" alt="SilverCare Logo" style="height:100px; width:auto; margin-right:10px;">
+      </a>
+
+      <!--a class="navbar-brand" href="index.html">SilverCare Portal</a-->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="hospitals.html">Local Hospitals</a></li>
+          <li class="nav-item"><a class="nav-link" href="community.html">Community Hub</a></li>
+          <li class="nav-item"><a class="nav-link" href="exercise.html">Exercise Videos</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--Constant Login button-->
+   <a href="login.html" class="btn btn-primary btn-large login-fixed">Log In</a>
+
+  <!-- Main Content -->
+  <main class="container my-4">
+    <!-- Welcome Banner -->
+    <section class="welcome-banner text-center">
+      <h1 style="font-size: 2.2rem;">Welcome to SilverCare Initiative</h1>
+      <p class="lead" style="font-size: 1.2rem;">Enhancing quality of life for seniors through comprehensive care and community building</p>
+      <button class="btn btn-outline-light btn-lg mt-3 read-btn" onclick="readAloud('Welcome to SilverCare Initiative. Enhancing quality of life for seniors through comprehensive care and community building')">
+        🔊 Read Aloud
+      </button>
+    </section>
+
+    <!-- Local Hospitals Directory -->
+    <section class="section-card">
+      <h2>🏥 Local Hospitals & Clinics</h2>
+      <div class="hospital-card">
+        <h4>Lions Gate Hospital</h4>
+        <p>📞 (604) 988-3131</p>
+        <p>📍 231 East 15th St, North Vancouver</p>
+        <button class="btn btn-outline-primary btn-sm">View Map</button>
+      </div>
+      <div class="hospital-card">
+        <h4>North Shore Health Clinic</h4>
+        <p>📞 (604) 984-7474</p>
+        <p>📍 123 Lonsdale Ave, North Vancouver</p>
+        <button class="btn btn-outline-primary btn-sm">View Map</button>
+      </div>
+      <a href="hospitals.html" class="btn btn-primary mt-2">View All Hospitals</a>
+    </section>
+
+    <!-- Exercise Videos -->
+    <section class="section-card">
+      <h2>💪 Exercise & Wellness Videos</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="video-card text-center">
+            <div style="background: #e9ecef; height: 120px; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+              <span style="font-size: 2rem;">▶</span>
+            </div>
+            <h5>Gentle Chair Yoga</h5>
+            <p>15 minutes • Beginner</p>
+            <button class="btn btn-primary">Watch Now</button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="video-card text-center">
+            <div style="background: #e9ecef; height: 120px; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+              <span style="font-size: 2rem;">▶</span>
+            </div>
+            <h5>Balance Exercises</h5>
+            <p>10 minutes • All levels</p>
+            <button class="btn btn-primary">Watch Now</button>
+          </div>
+        </div>
+      </div>
+      <a href="exercise.html" class="btn btn-primary mt-2">View All Videos</a>
+    </section>
+
+    <!-- Community Events -->
+    <section class="section-card">
+      <h2>📅 Community Events</h2>
+      <div class="event-card">
+        <h4>Weekly Bingo Night</h4>
+        <p>📅 Every Tuesday • 2:00 PM</p>
+        <p>Community Room • All residents welcome</p>
+      </div>
+      <div class="event-card">
+        <h4>Book Club Meeting</h4>
+        <p>📅 Friday, March 15 • 10:00 AM</p>
+        <p>Library • This month: "The Thursday Murder Club"</p>
+      </div>
+      <a href="community.html" class="btn btn-primary mt-2">View All Events</a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4 mt-5">
+    <div class="container">
+      <p class="mb-1">SilverCare Initiative</p>
+      <p class="mb-1">📍 123 Care Street, North Vancouver, BC</p>
+      <p class="mb-1">📞 Helpline: <a href="tel:+16041234567" class="text-white">(604) 123-4567</a></p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function readAloud(text) {
+      if ('speechSynthesis' in window) {
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.rate = 0.9;
+        window.speechSynthesis.speak(utterance);
+      } else {
+        alert('Read aloud not supported in your browser');
+      }
+    }
+  </script>
+</body>
+</html>
