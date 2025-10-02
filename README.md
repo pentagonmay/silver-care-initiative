@@ -15,7 +15,7 @@ Through this platform, elders can easily sign in, book appointments with nurses,
 - **Frontend:** HTML, CSS, JavaScript (so far)
 - **Backend:** Python Flask / Node.js (so far)
 - **Database:** SQL
-- **Hosting:** GitHub Pages
+- **Hosting:** likely AWS
 
 Members of this project:
 Ebube Nwasike
